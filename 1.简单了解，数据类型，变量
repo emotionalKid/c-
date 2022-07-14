@@ -1,0 +1,28 @@
+1.C语言诞生的简单流程：
+ 计算机语言（二进制语言）->汇编语言->b语言->c语言
+xxx.c的文件是源文件、xxx.h是头文件
+2.数据类型：
+      Char    //字符数据类型
+      Short   //短整型
+      Int     //整形 
+      Long   //长整型 （sizeof(long)>=sizeof(int)  sizeof是c语言的关键字）
+      Long long //更长整形
+      Float   //单精度浮点型
+      Double //双精度浮点型
+3.变量：
+      1局部变量：
+      定义在{}外面，作用于整个页面
+      2全局变量：
+      定义在{}内，作用在{}内
+      #define _CRT_SECURE_NO_WARNINGS 1
+      #include <stdio.h>
+      int main(){
+        ;//局部变量
+        int a = 0;
+        int b = 0;
+        int sum = 0;
+        scanf("%d %d", &a,&b);
+        sum = a + b;
+        printf("sum= %d\n",sum);
+        return 0;
+      }
