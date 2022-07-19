@@ -1,0 +1,55 @@
+10）函数
+1.含义：
+负责完成某项特定的功能的代码，相对于其他代码而言具有相对的独立性，一般会有参数和返回值，提供了对过程的封装和隐藏（c语言是面向过程的语言/而java是面向对象，就是对对象中的属性函数进行封装和隐藏）
+2.库函数：
+以及实现的一些通用的函数，被封装起来了，被称为库函数
+库文档地址：www.cplusplus.com
+3.函数类型
+IO函数：
+字符串操作函数：
+字符操作函数：
+内存操作函数：
+时间函数：
+数学函数：
+其他库函数：
+
+#include<string.h>//使用函数主要引头文件，java需要导包
+int main() {
+	char a[20] = { 0 }; //c语言中没用Boolean类型,0便是false/不是0表示true
+	char b[] = "abcdefg";
+	//把b拷贝到a中使用strcpy函数
+	strcpy(a, b);//a是拷贝目的地，b是拷贝源
+	printf("%s", a);
+	return 0;
+}
+#include<string.h>//使用函数主要引头文件，java需要导包
+int main() {
+	char a[] = "aaaah";
+	memset(a, "b", 4);//把a中前4为替换为b
+	printf("%s\n", a);
+}
+4.自定义函数
+函数组成
+Ret_type(返回值类型) functionName(函数名)（参数parade，*）{函数体}
+//返回俩数之和
+int add(int a,int b) {
+	return a + b;
+}
+int main() {
+	int c=add(1, 2);
+	printf("%d", c);
+}
+//交换a和b
+void Swap(int*a, int*b) {//通过指针去交换
+	int c = 0;
+	c = *a;
+	*a = *b;
+	*b = c;
+}
+int main() {
+	int a = 10;
+	int b = 20;
+	printf("交换前%d%d\n", a,b);
+	Swap(&a, &b);
+	printf("交换后%d%d\n", a,b);
+}
